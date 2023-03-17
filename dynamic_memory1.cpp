@@ -14,7 +14,7 @@ public:
 
 strtype::strtype(char *ptr){
     len=strlen(ptr);
-    p = (char *)malloc(len+1);
+    p = (char *)malloc(len+1);//dymanically memory allocate.
     if(!p){
         cout<<"not successfully allocated";
         return ;

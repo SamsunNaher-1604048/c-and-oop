@@ -41,11 +41,36 @@ void preorder(struct node *root){
     preorder(root->right);
 }
 
+
+void inorder(struct node *root){
+    if(root == 0){
+        return;
+    }
+    inorder(root->left);
+    cout<<root->data<<endl;
+    inorder(root->right);
+}
+
+void postorder(struct node *root){
+     if(root == 0){
+        return;
+    }
+     postorder(root->left);
+     postorder(root->right);
+     cout<<root->data<<endl;
+}
+
 int main(){
     struct node *root;
     root = create();
 
     cout<<"pre order treversal"<<endl;
     preorder(root);
+
+    cout<<"inorder terversal"<<endl;
+    inorder(root)
+
+    cout<<"post order terversal"<<endl;
+    postorder(root)
     return 0;
 }
